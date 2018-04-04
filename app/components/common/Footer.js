@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 class Footer extends Component {
     render() {
@@ -13,12 +14,12 @@ class Footer extends Component {
                                     <div
                                         className="d-flex justify-content-center align-items-center nav-menu-footer-bar pb-4">
                                         <ul className="nav">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a className="" href="category.html">Category</a></li>
-                                            <li><a className="" href="category-2.html">Category</a></li>
-                                            <li><a className="" href="category-3.html">Category</a></li>
-                                            <li><a className="" href="category-4.html">Category</a></li>
-                                            <li><a className="" href="contact.html">Contact</a></li>
+                                            <li><Link to='/home'>Home</Link></li>
+                                            <li><Link to='/category'>Category</Link></li>
+                                            <li><Link to='/category2'>Category</Link></li>
+                                            <li><Link to='/category3'>Category</Link></li>
+                                            <li><Link to='/category4'>Category</Link></li>
+                                            <li><Link to='/contact'>Contact</Link></li>
                                         </ul>
                                     </div>
                                 </div>

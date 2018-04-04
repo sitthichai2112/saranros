@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../src/index.css';
 import RouteApp from './config/routes';
-// import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux'
 import store from './store'
 import {
