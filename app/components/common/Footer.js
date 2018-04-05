@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link, withRouter} from 'react-router-dom';
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
 
 class Footer extends Component {
     render() {
@@ -14,12 +16,26 @@ class Footer extends Component {
                                     <div
                                         className="d-flex justify-content-center align-items-center nav-menu-footer-bar pb-4">
                                         <ul className="nav">
-                                            <li><Link to='/home'>Home</Link></li>
-                                            <li><Link to='/category'>Category</Link></li>
-                                            <li><Link to='/category2'>Category</Link></li>
-                                            <li><Link to='/category3'>Category</Link></li>
-                                            <li><Link to='/category4'>Category</Link></li>
-                                            <li><Link to='/contact'>Contact</Link></li>
+                                            <li>
+                                                <Link to='/home'
+                                                      className={this.props.location.pathname === '/home' ? 'active' : ''}>Home
+                                                </Link>
+                                            </li>
+                                            <li><Link to='/category'
+                                                      className={this.props.location.pathname === '/category' ? 'active' : ''}>Category</Link>
+                                            </li>
+                                            <li><Link to='/category2'
+                                                      className={this.props.location.pathname === '/category2' ? 'active' : ''}>Category</Link>
+                                            </li>
+                                            <li><Link to='/category3'
+                                                      className={this.props.location.pathname === '/category3' ? 'active' : ''}>Category</Link>
+                                            </li>
+                                            <li><Link to='/category4'
+                                                      className={this.props.location.pathname === '/category4' ? 'active' : ''}>Category</Link>
+                                            </li>
+                                            <li><Link to='/contact'
+                                                      className={this.props.location.pathname === '/contact' ? 'active' : ''}>Contact</Link>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -36,4 +52,11 @@ class Footer extends Component {
     }
 }
 
-export default Footer;
+
+function MapStateToProps(state) {
+    return {}
+}
+
+
+export default withRouter(connect(MapStateToProps, (null, dispatch => bindActionCreators({}, dispatch)))(Footer))
+
