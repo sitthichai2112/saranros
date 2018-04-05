@@ -8,12 +8,10 @@ import {
 } from 'react-router-dom';
 
 
-import './../public/css/style.css'
+// import './../public/css/style.css'
 // import './../public/img'
-// import './../public/js/setting'
+// import './../public/js/settingz'
 // import './../public/plugins/swiper-4.2.0'
-
-
 
 ReactDOM.render(
     <Provider store={store}>

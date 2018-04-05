@@ -1,7 +1,13 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 class TopHeader extends Component {
+
+    openNavigation = () => {
+        this.props.clickOpenNavigation(true)
+
+    }
+
     render() {
         return (
             <div className="container-fluid nav-top-container">
@@ -9,7 +15,8 @@ class TopHeader extends Component {
                     <div className="row nav-top">
                         <div className="col-4 d-flex justify-content-start align-items-center">
                             <ul className="pl-0 mb-0">
-                                <li><a className="bar" onClick="openNav()"><i className="fas fa-bars"></i></a>
+                                <li><a className="bar" onClick={() => this.openNavigation()}><i
+                                    className="fas fa-bars"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -83,4 +90,4 @@ class TopHeader extends Component {
     }
 }
 
-export default TopHeader;
+export default TopHeader
